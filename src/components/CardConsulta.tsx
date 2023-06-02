@@ -19,7 +19,8 @@ export function CardConsulta({
 	foiAtendido
 }: CardProps) {
 	return (
-		<VStack w="100%" bg={foiAgendado ? 'blue.100' : 'white'} p="5" borderRadius="lg" shadow="2">
+		<VStack w="100%" bg={foiAgendado ? 'white' : 'blue.100'} p="5"
+			borderRadius="lg" shadow="2" mb={5}>
 			<VStack flexDir="row">
 				<Avatar size="lg" source={{ uri: foto }} />
 				<VStack pl="4">

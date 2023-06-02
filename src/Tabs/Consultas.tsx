@@ -1,11 +1,11 @@
-import { VStack, Text, Divider } from "native-base"
+import { VStack, Text, Divider, ScrollView } from "native-base"
 import { CardConsulta } from "../components/CardConsulta"
 import { Titulo } from "../components/Titulo"
 import { Botao } from "../components/Botao"
 
 export default function Consultas() {
 	return (
-		<VStack p={5}>
+		<ScrollView p={5}>
 			<Titulo color="blue.500" mb={5}>
 				Minhas Consultas
 			</Titulo>
@@ -23,7 +23,32 @@ export default function Consultas() {
 				foiAgendado
 			/>
 
-			<Divider mt={5}/>
-		</VStack>
+			<Divider mt={5} />
+
+			<Titulo color="blue.500" mb={5} fontSize="lg" alignSelf="flex-start">
+				Consultas Passadas
+			</Titulo>
+
+			<CardConsulta
+				nome="Dr. Rafael"
+				especialidade="Cardiologista"
+				foto=""
+				foiAtendido
+			/>
+
+			<CardConsulta
+				nome="Dra. Silvana"
+				especialidade="Dentista"
+				foto=""
+				foiAtendido
+			/>
+
+			<CardConsulta
+				nome="Dra. Maria"
+				especialidade="Pediatra"
+				foto=""
+				foiAtendido
+			/>
+		</ScrollView>
 	)
 }
