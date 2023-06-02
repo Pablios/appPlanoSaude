@@ -41,13 +41,12 @@ const tabs = [
 export default function Tabs() {
 	return (
 
-		<Tab.Navigator
-			screenOptions={screenOptions}
-		>
+		<Tab.Navigator screenOptions={screenOptions} >
 			{tabs.map((tab) => (
-
 				<Tab.Screen
-					name={tab.name} component={tab.component}
+					key={tab.name}
+					name={tab.name}
+					component={tab.component}
 					options={{
 						headerShown: false,
 						tabBarIcon: ({ color, size }) => (
