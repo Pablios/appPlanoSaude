@@ -1,11 +1,17 @@
-import { VStack, Text } from "native-base"
+import { VStack, Text, ScrollView, Avatar, Divider, Box } from "native-base"
+import { EntradaTexto } from "../components/EntradaTexto"
 
 export default function Home() {
 	return (
-		<VStack>
-			<Text>
-				Home
-			</Text>
-		</VStack>
+		<ScrollView>
+			<VStack>
+				<Box>
+					<EntradaTexto
+						label='teste'
+						placeholder='teste'
+					/>
+				</Box>
+			</VStack>
+		</ScrollView>
 	)
 }
